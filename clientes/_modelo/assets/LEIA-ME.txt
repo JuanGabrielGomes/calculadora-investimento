@@ -1,0 +1,7 @@
+Coloque aqui os arquivos de logo do cliente:
+
+- logo-horizontal.png  -> logo completa (usada no topo da página)
+- icon.png             -> só o ícone/símbolo (usado como favicon)
+
+Os nomes dos arquivos devem ser exatamente esses, ou você pode mudar o
+caminho no index.html (procure por "assets/").

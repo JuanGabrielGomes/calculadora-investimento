@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Patrimonial - Maav Hub</title>
+  <meta name="description" content="Simule um investimento agora.">
+  <link rel="icon" href="assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+
+    <header class="page-header">
+      <img src="assets/logo-horizontal.png" alt="Maav Hub">
+    </header>
+
+    <!-- ============================================================
+         TEXTOS DA PÁGINA — edite à vontade o que está entre as tags.
+         ============================================================ -->
+    <section class="hero">
+      <h1>Entenda o poder de investir através de consórcio</h1>
+      <p>Simule um investimento agora.</p>
+    </section>
+
+    <div class="widget">
+      <div class="header">
+        SIMULADOR DE
+        <br>
+        <span class="investimento">Investimento</span>
+      </div>
+
+      <div class="main-container">
+        <!-- Calculadora -->
+        <div class="calculator">
+          <div>
+            <label for="credit-value">Valor do Crédito</label>
+            <div class="credit-container">
+              <input type="text" id="credit-value" class="value-display" readonly>
+              <div class="credit-buttons">
+                <button type="button" id="decrease-credit" aria-label="Diminuir valor do crédito">−</button>
+                <button type="button" id="increase-credit" aria-label="Aumentar valor do crédito">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label for="parcel-initial">Valor da Parcela Inicial</label>
+            <input type="text" id="parcel-initial" class="value-display" readonly>
+          </div>
+
+          <div class="incc">
+            <label>Reajuste INCC</label>
+            <span class="reajuste" id="incc-value">7%</span>
+          </div>
+
+          <div>
+            <label for="contemplation-period">Prazo de Contemplação</label>
+            <span id="slider-value" class="value-display" style="display:inline-block;width:auto;">1 meses</span>
+            <input type="range" id="contemplation-period" min="1" max="50" value="1">
+          </div>
+
+          <div>
+            <label for="investment-value">Valor do seu Investimento</label>
+            <span id="investment-value" class="value-display">R$ 0,00</span>
+          </div>
+        </div>
+
+        <!-- Campos calculados -->
+        <div class="calculated-fields">
+          <div>
+            <label for="updated-credit">Valor do Crédito Atualizado</label>
+            <span id="updated-credit" class="value-display">R$ 0,00</span>
+          </div>
+
+          <div>
+            <label for="reduced-parcel">Parcela Reduzida 70%</label>
+            <span id="reduced-parcel" class="value-display">R$ 0,00</span>
+          </div>
+
+          <div>
+            <label for="full-parcel">Parcela Cheia</label>
+            <span id="full-parcel" class="value-display">R$ 0,00</span>
+          </div>
+
+          <div>
+            <label for="yield-value">Renda Passiva (Short Stay)</label>
+            <span id="yield-value" class="value-display">R$ 0,00</span>
+          </div>
+
+          <div>
+            <label for="invested-value">Valor Investido</label>
+            <span id="invested-value" class="value-display">R$ 0,00</span>
+          </div>
+
+          <div>
+            <label for="payback-value">Payback</label>
+            <span id="payback-value" class="value-display">0 meses</span>
+          </div>
+
+          <div>
+            <label>Custo de Oportunidade</label>
+            <span class="value-display">R$ 0,00</span>
+          </div>
+
+          <!-- Pagamento do Imóvel -->
+          <div class="payment-section">
+            <h3>PAGAMENTO DO IMÓVEL</h3>
+            <div class="imovel-row">
+              <div class="imovel-item">
+                <label>Você pagou</label>
+                <span id="you-paid" class="value-display">0%</span>
+              </div>
+              <div class="imovel-item">
+                <label>O inquilino pagará</label>
+                <span id="tenant-paid" class="value-display">0%</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="texto">
+            Nesse método, você construirá patrimônio imobiliário e receberá rendimentos mensais.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-wrap">
+      <a
+        class="cta-button"
+        id="cta-whatsapp"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+      >CONVERSAR COM UM ESPECIALISTA</a>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
