@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/clientes/maav-hub/index.html" },
+    { "source": "/style.css", "destination": "/clientes/maav-hub/style.css" },
+    { "source": "/script.js", "destination": "/clientes/maav-hub/script.js" },
+    { "source": "/assets/:path*", "destination": "/clientes/maav-hub/assets/:path*" }
+  ]
+}
