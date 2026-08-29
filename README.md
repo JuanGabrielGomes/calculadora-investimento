@@ -51,6 +51,42 @@ nada para testar localmente.
    (WhatsApp e regras de cálculo) dessa pasta.
 4. Pronto — a pasta `clientes/consori` já é o site completo desse cliente.
 
+## Google Tag Manager (ou outra tag de rastreamento)
+
+Não precisa saber programar. Dentro do `index.html` de cada cliente tem duas
+áreas já marcadas com comentários `GOOGLE TAG MANAGER`:
+
+1. Uma logo antes de `</head>` — cole ali o **primeiro** trecho de código que
+   o Google Tag Manager te dá na tela "Instalar Google Tag Manager" (a caixa
+   de cima, que começa com `<script>`).
+2. Uma logo depois de `<body>` — cole ali o **segundo** trecho (a caixa de
+   baixo, que começa com `<noscript>`).
+
+Se não for usar GTM, é só deixar essas duas áreas em branco.
+
+## Subir na Vercel do cliente (conta dele, subdomínio dele)
+
+Se a Vercel do cliente estiver ligada a uma organização do GitHub, o app da
+Vercel só enxerga repositórios que pertencem a essa própria organização —
+não repositórios externos onde alguém da organização é só colaborador. Se o
+repositório não aparecer na hora de importar, a solução é duplicar o
+repositório para dentro do GitHub do cliente antes de importar (veja o
+remote `maav`, se já estiver configurado, com `git remote -v`).
+
+Depois disso (ou se o cliente já enxergar o repo original), rode o script
+`scripts/conectar-vercel-cliente.sh` — ele é um passo a passo interativo que
+te guia por cada tela (importar o repo na Vercel do cliente, liberar o
+GitHub App se precisar, e depois ligar o subdomínio dele com o registro de
+DNS certo):
+
+```bash
+bash scripts/conectar-vercel-cliente.sh
+```
+
+O `vercel.json` na raiz já redireciona `/` para `clientes/maav-hub/` — não
+mude o "Root Directory" nas configurações do projeto na Vercel, ou esse
+redirecionamento quebra.
+
 ## Subir na HostGator (ou qualquer hospedagem)
 
 1. Entre no cPanel → **Gerenciador de Arquivos** (ou use um programa de
